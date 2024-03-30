@@ -1,0 +1,16 @@
+﻿{
+  "Name": "email confirmation",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "8L1CwUL8CkGcHl4Lsx5qyA",
+  "Reference": "waikBANbM0CUbwa0Sj05Hg/8L1CwUL8CkGcHl4Lsx5qyA",
+  "ParentRef": "waikBANbM0CUbwa0Sj05Hg/JSmbV3IhAkiRifARt2JFNA",
+  "Created": "2024-03-30T13:19:40.7322277Z",
+  "Updated": "2024-03-30T13:21:12.9008751Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
