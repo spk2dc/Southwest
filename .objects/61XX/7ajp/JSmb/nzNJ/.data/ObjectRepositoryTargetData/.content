@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ObjectRepositoryTargetData ContentHash="w9gnQZ6VcEqhzI7kzioXWA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+  <ObjectRepositoryTargetData.Data>
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.dclibrary.org/suggest-title" DesignTimeRectangle="148, 539, 1621, 67" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='             Author*         ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='             Author*         ' /&gt;" Guid="01b8862d-f3ad-4da9-be89-6cfff03aa42b" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+      <TargetAnchorable.Anchors>
+        <scg:List x:TypeArguments="ITarget" Capacity="4">
+          <Target DesignTimeRectangle="148, 508, 64, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' check:text='Author*' /&gt;" SearchSteps="FuzzySelector" />
+        </scg:List>
+      </TargetAnchorable.Anchors>
+      <imageRef attrName="InformativeScreenshot" originalValue="6ffe72440944cd3c711a181ea0ca3308.png" xmlns="">00cAHNMiWrUCEtVDREweUBQ</imageRef>
+    </TargetAnchorable>
+    <x:String x:Key="ActivityType">None</x:String>
+  </ObjectRepositoryTargetData.Data>
+</ObjectRepositoryTargetData>

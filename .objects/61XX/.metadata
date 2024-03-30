@@ -1,0 +1,11 @@
+﻿{
+  "Name": "Southwest",
+  "Type": "App",
+  "Id": "61XXpNkcqkiYAUyN4Y02ng",
+  "Reference": "waikBANbM0CUbwa0Sj05Hg/61XXpNkcqkiYAUyN4Y02ng",
+  "Created": "2024-03-27T00:47:07.5631704Z",
+  "Updated": "2024-03-27T00:47:07.5631704Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}

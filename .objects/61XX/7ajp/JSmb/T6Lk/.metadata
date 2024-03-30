@@ -1,0 +1,16 @@
+﻿{
+  "Name": "title",
+  "Type": "Element",
+  "TaxonomyType": "Element",
+  "Id": "T6LkzyV1gkOspo2GfN1RqA",
+  "Reference": "waikBANbM0CUbwa0Sj05Hg/T6LkzyV1gkOspo2GfN1RqA",
+  "ParentRef": "waikBANbM0CUbwa0Sj05Hg/JSmbV3IhAkiRifARt2JFNA",
+  "Created": "2024-03-27T00:48:22.7705307Z",
+  "Updated": "2024-03-27T00:50:11.5365223Z",
+  "CreatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ],
+  "UpdatedBy": [
+    "UiPath.Platform, Version=24.2.0.0, Culture=neutral, PublicKeyToken=null"
+  ]
+}
