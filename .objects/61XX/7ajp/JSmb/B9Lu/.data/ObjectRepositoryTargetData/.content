@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-16"?>
-<ObjectRepositoryTargetData ContentHash="nFcRhdBOgUWafa8Mbq886g" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+<ObjectRepositoryTargetData ContentHash="McO9oJNyIkW2FiX_ehzHiA" Reference="waikBANbM0CUbwa0Sj05Hg/B9LupSltoUSGIurgFZWvLA" xmlns="http://schemas.uipath.com/workflow/activities/uix" xmlns:scg="clr-namespace:System.Collections.Generic;assembly=System.Private.CoreLib" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
   <ObjectRepositoryTargetData.Data>
-    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.dclibrary.org/suggest-title" DesignTimeRectangle="148, 656, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='             Email *         ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='             Email *         ' /&gt;" Guid="6fe66c02-7338-4083-9c36-5691921382fa" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+    <TargetAnchorable x:Key="TargetAnchorable" BrowserURL="https://www.dclibrary.org/suggest-title" DesignTimeRectangle="148, 719, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='*Email*' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='*Email*' type='email' class='form-control' /&gt;" Guid="6fe66c02-7338-4083-9c36-5691921382fa" IsResponsive="True" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
       <TargetAnchorable.Anchors>
         <scg:List x:TypeArguments="ITarget" Capacity="4">
-          <Target DesignTimeRectangle="148, 625, 58, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' check:text='Email *' /&gt;" SearchSteps="FuzzySelector" />
+          <Target DesignTimeRectangle="148, 687, 58, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='*Email*' check:text='Email *' /&gt;" ImageBase64="" SearchSteps="FuzzySelector" />
         </scg:List>
       </TargetAnchorable.Anchors>
-      <imageRef attrName="InformativeScreenshot" originalValue="adb020061aa2a496ab74dbaa384eeb14.png" xmlns="">05mtbGj6RsE64_gzl1tC1zA</imageRef>
+      <imageRef attrName="InformativeScreenshot" originalValue="2083c27ac620fdeaf7e9b63d0077acae.png" xmlns="">01FkiD_Q7AEaxcRXqTtg65Q</imageRef>
     </TargetAnchorable>
     <x:String x:Key="ActivityType">None</x:String>
   </ObjectRepositoryTargetData.Data>

@@ -5,7 +5,7 @@
   <VisualBasic.Settings>
     <x:Null />
   </VisualBasic.Settings>
-  <sap:VirtualizedContainerService.HintSize>848,3561.6</sap:VirtualizedContainerService.HintSize>
+  <sap:VirtualizedContainerService.HintSize>848.8,3463.2</sap:VirtualizedContainerService.HintSize>
   <sap2010:WorkflowViewState.IdRef>Southwest_1</sap2010:WorkflowViewState.IdRef>
   <TextExpression.NamespacesForImplementation>
     <sco:Collection x:TypeArguments="x:String">
@@ -110,7 +110,7 @@
       <AssemblyReference>System.Runtime.Numerics</AssemblyReference>
     </sco:Collection>
   </TextExpression.ReferencesForImplementation>
-  <Sequence DisplayName="Southwest" sap:VirtualizedContainerService.HintSize="705.6,3496.8" sap2010:WorkflowViewState.IdRef="Sequence_1">
+  <Sequence DisplayName="Southwest" sap:VirtualizedContainerService.HintSize="705.6,3398.4" sap2010:WorkflowViewState.IdRef="Sequence_1">
     <Sequence.Variables>
       <Variable x:TypeArguments="x:Int32" Name="index" />
       <Variable x:TypeArguments="x:String" Name="year" />
@@ -122,56 +122,56 @@
         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
       </scg:Dictionary>
     </sap:WorkflowViewStateService.ViewState>
-    <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="suggest" sap:VirtualizedContainerService.HintSize="643.2,3408" sap2010:WorkflowViewState.IdRef="NApplicationCard_3" OpenMode="Always" ScopeGuid="5d5e36ae-b0b7-4a6d-84e5-062e6785c28d" Version="V2">
-      <uix:NApplicationCard.Body>
-        <ActivityAction x:TypeArguments="x:Object">
+    <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="643.2,3309.6" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[list]">
+      <ui:ForEach.Body>
+        <ActivityAction x:TypeArguments="x:String">
           <ActivityAction.Argument>
-            <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
+            <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
           </ActivityAction.Argument>
-          <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="609.6,3168" sap2010:WorkflowViewState.IdRef="Sequence_7">
+          <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="609.6,3120.8" sap2010:WorkflowViewState.IdRef="Sequence_4">
             <sap:WorkflowViewStateService.ViewState>
               <scg:Dictionary x:TypeArguments="x:String, x:Object">
                 <x:Boolean x:Key="IsExpanded">True</x:Boolean>
               </scg:Dictionary>
             </sap:WorkflowViewStateService.ViewState>
-            <ui:ForEach x:TypeArguments="x:String" CurrentIndex="[index]" DisplayName="For Each" sap:VirtualizedContainerService.HintSize="547.2,3080" sap2010:WorkflowViewState.IdRef="ForEach`1_2" Values="[list]">
-              <ui:ForEach.Body>
-                <ActivityAction x:TypeArguments="x:String">
+            <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="547.2,174.4" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[index.ToString+&quot;: &quot;+currentItem]" />
+            <Assign sap:VirtualizedContainerService.HintSize="547.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_7">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(0)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="547.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_8">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(0)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <Assign sap:VirtualizedContainerService.HintSize="547.2,113.6" sap2010:WorkflowViewState.IdRef="Assign_9">
+              <Assign.To>
+                <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
+              </Assign.To>
+              <Assign.Value>
+                <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(1).Split(",")(0)]</InArgument>
+              </Assign.Value>
+            </Assign>
+            <uix:NApplicationCard AttachMode="ByInstance" CloseMode="Always" DisplayName="suggest" sap:VirtualizedContainerService.HintSize="547.2,2516.8" sap2010:WorkflowViewState.IdRef="NApplicationCard_4" OpenMode="Always" ScopeGuid="5d5e36ae-b0b7-4a6d-84e5-062e6785c28d" Version="V2">
+              <uix:NApplicationCard.Body>
+                <ActivityAction x:TypeArguments="x:Object">
                   <ActivityAction.Argument>
-                    <DelegateInArgument x:TypeArguments="x:String" Name="currentItem" />
+                    <DelegateInArgument x:TypeArguments="x:Object" Name="WSSessionData" />
                   </ActivityAction.Argument>
-                  <Sequence DisplayName="Body" sap:VirtualizedContainerService.HintSize="513.6,2889.6" sap2010:WorkflowViewState.IdRef="Sequence_4">
+                  <Sequence DisplayName="Do" sap:VirtualizedContainerService.HintSize="513.6,2276.8" sap2010:WorkflowViewState.IdRef="Sequence_9">
                     <sap:WorkflowViewStateService.ViewState>
                       <scg:Dictionary x:TypeArguments="x:String, x:Object">
                         <x:Boolean x:Key="IsExpanded">True</x:Boolean>
                       </scg:Dictionary>
                     </sap:WorkflowViewStateService.ViewState>
-                    <ui:LogMessage DisplayName="Log Message" sap:VirtualizedContainerService.HintSize="451.2,184" sap2010:WorkflowViewState.IdRef="LogMessage_1" Message="[index.ToString+&quot;: &quot;+currentItem]" />
-                    <Assign sap:VirtualizedContainerService.HintSize="451.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_7">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[title]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(0)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="451.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_8">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[author]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(0)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <Assign sap:VirtualizedContainerService.HintSize="451.2,121.6" sap2010:WorkflowViewState.IdRef="Assign_9">
-                      <Assign.To>
-                        <OutArgument x:TypeArguments="x:String">[year]</OutArgument>
-                      </Assign.To>
-                      <Assign.Value>
-                        <InArgument x:TypeArguments="x:String">[currentItem.Split(" by.")(1).Split(" - year ")(1).Split(",")(0)]</InArgument>
-                      </Assign.Value>
-                    </Assign>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" Text="[title]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'title'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_12" Text="[title]" Version="V3">
                       <uix:NTypeInto.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="JwBLFXnrxkOqJ6zkKHVffg" DesignTimeRectangle="148, 446, 1621, 43" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='         Title *     ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='         Title *     ' /&gt;" Guid="bb403643-fdb5-4134-9601-d088cb7f2427" InformativeScreenshot="3af7eab6cd70e329f8bfd79c66774832.png" IsResponsive="True" Reference="waikBANbM0CUbwa0Sj05Hg/T6LkzyV1gkOspo2GfN1RqA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -182,29 +182,29 @@
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'author'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" Text="[author]" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'author'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_13" ScopeIdentifier="5d5e36ae-b0b7-4a6d-84e5-062e6785c28d" Text="[author]" Version="V3">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="w9gnQZ6VcEqhzI7kzioXWA" DesignTimeRectangle="148, 539, 1621, 67" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='             Author*         ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='             Author*         ' /&gt;" Guid="01b8862d-f3ad-4da9-be89-6cfff03aa42b" InformativeScreenshot="6ffe72440944cd3c711a181ea0ca3308.png" IsResponsive="True" Reference="waikBANbM0CUbwa0Sj05Hg/nzNJz2OM5U2VqBjFo49pUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="zs8o0vQbB0iZnq8MSR5sgw" DesignTimeRectangle="148, 587, 1621, 67" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='*Author*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='TEXTAREA' aaname='*Author*' type='' class='form-control' /&gt;" Guid="01b8862d-f3ad-4da9-be89-6cfff03aa42b" InformativeScreenshot="8636459f0dd29d71551289d5585bc32c.png" IsResponsive="True" Reference="waikBANbM0CUbwa0Sj05Hg/nzNJz2OM5U2VqBjFo49pUA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target DesignTimeRectangle="148, 508, 64, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' check:text='Author*' /&gt;" SearchSteps="FuzzySelector" />
+                              <uix:Target DesignTimeRectangle="148, 555, 64, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Author*' check:text='Author*' /&gt;" SearchSteps="FuzzySelector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,258.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" Text="bionicle0107@yahoo.com" Version="V3">
+                    <uix:NTypeInto ActivateBefore="True" ClickBeforeMode="Single" DisplayName="Type Into 'email'" EmptyFieldMode="SingleLine" sap:VirtualizedContainerService.HintSize="451.2,250.4" sap2010:WorkflowViewState.IdRef="NTypeInto_14" ScopeIdentifier="5d5e36ae-b0b7-4a6d-84e5-062e6785c28d" Text="bionicle0107@yahoo.com" Version="V3">
                       <uix:NTypeInto.Target>
-                        <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="nFcRhdBOgUWafa8Mbq886g" DesignTimeRectangle="148, 656, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='             Email *         ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='             Email *         ' /&gt;" Guid="6fe66c02-7338-4083-9c36-5691921382fa" InformativeScreenshot="adb020061aa2a496ab74dbaa384eeb14.png" IsResponsive="True" Reference="waikBANbM0CUbwa0Sj05Hg/B9LupSltoUSGIurgFZWvLA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
+                        <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="McO9oJNyIkW2FiX_ehzHiA" DesignTimeRectangle="148, 719, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="InputBox" FullSelectorArgument="&lt;webctrl tag='INPUT' aaname='*Email*' type='email' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='INPUT' aaname='*Email*' type='email' class='form-control' /&gt;" Guid="6fe66c02-7338-4083-9c36-5691921382fa" InformativeScreenshot="2083c27ac620fdeaf7e9b63d0077acae.png" IsResponsive="True" Reference="waikBANbM0CUbwa0Sj05Hg/B9LupSltoUSGIurgFZWvLA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="Selector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
                             <scg:List x:TypeArguments="uix:ITarget" Capacity="1">
-                              <uix:Target DesignTimeRectangle="148, 625, 58, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' check:text='Email *' /&gt;" SearchSteps="FuzzySelector" />
+                              <uix:Target DesignTimeRectangle="148, 687, 58, 25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Email *' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='*Email*' check:text='Email *' /&gt;" ImageBase64="" SearchSteps="FuzzySelector" />
                             </scg:List>
                           </uix:TargetAnchorable.Anchors>
                         </uix:TargetAnchorable>
                       </uix:NTypeInto.Target>
                     </uix:NTypeInto>
-                    <uix:NSelectItem DisplayName="Select Item 'branch'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Southwest Library" Version="V3">
+                    <uix:NSelectItem DisplayName="Select Item 'branch'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_5" Item="Southwest Library" Version="V3">
                       <uix:NSelectItem.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="RtiTh0A8bU2GaNYflPt8MA" DesignTimeRectangle="148, 825, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='         Home Library *     ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='         Home Library *     ' /&gt;" Guid="949f5935-693b-4b7b-9efe-560458c3baa6" InformativeScreenshot="d8b93367811c41560a0d7cf4e71ab437.png" Reference="waikBANbM0CUbwa0Sj05Hg/QWzrDsWLcEKG8F4FYWK40A" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -215,7 +215,7 @@
                         </uix:TargetAnchorable>
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'format'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DelayAfter="5" DisplayName="Click 'format'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_6" KeyModifiers="None" MouseButton="Left" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="9zxWDCjgeUSSM3cyi16n_Q" DesignTimeRectangle="148, 1017, 160, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Digital Audiobook' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Digital Audiobook' /&gt;" Guid="64101aa5-11ab-42c6-9bfb-c7cfd1870bac" InformativeScreenshot="39acbf78c80257d0a35232ece70c601f.png" Reference="waikBANbM0CUbwa0Sj05Hg/VrH9d933X0uqOzYQ6IqSEQ" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -226,7 +226,7 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NSelectItem DisplayName="Select Item 'audience'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Adult" Version="V3">
+                    <uix:NSelectItem DisplayName="Select Item 'audience'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NSelectItem_6" Item="Adult" Version="V3">
                       <uix:NSelectItem.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="4PayXUSxTUSr0meR3X4_fQ" DesignTimeRectangle="148, 286, 1621, 42" DesignTimeScaleFactor="1.25" ElementType="DropDown" FullSelectorArgument="&lt;webctrl tag='SELECT' aaname='         Audience *     ' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='SELECT' aaname='         Audience *     ' /&gt;" Guid="d9fc288b-11cf-4759-8504-c82c73ce3c58" InformativeScreenshot="173739f57334628b8d9130c538c42a20.png" Reference="waikBANbM0CUbwa0Sj05Hg/823uFQ7c_U-l0iY8JgWKsw" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -237,7 +237,7 @@
                         </uix:TargetAnchorable>
                       </uix:NSelectItem.Target>
                     </uix:NSelectItem>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'type'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'type'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_7" KeyModifiers="None" MouseButton="Left" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="KTM-D0pLrU-KF38xMcUVTA" DesignTimeRectangle="148, 416, 102, 25" DesignTimeScaleFactor="1.25" ElementType="Text" FullSelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Nonfiction' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='LABEL' visibleinnertext='Nonfiction' /&gt;" Guid="34baddda-8d29-4c96-a202-864d7acc7642" InformativeScreenshot="6dac2a4830756a29605c1b44602a98aa.png" Reference="waikBANbM0CUbwa0Sj05Hg/x49UhKWOgkyd06EbOgvSfA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive">
                           <uix:TargetAnchorable.Anchors>
@@ -248,9 +248,9 @@
                         </uix:TargetAnchorable>
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,385.6" sap2010:WorkflowViewState.IdRef="CommentOut_1">
+                    <ui:CommentOut DisplayName="Comment Out" sap:VirtualizedContainerService.HintSize="451.2,380" sap2010:WorkflowViewState.IdRef="CommentOut_1">
                       <ui:CommentOut.Body>
-                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,267.2" sap2010:WorkflowViewState.IdRef="Sequence_8">
+                        <Sequence DisplayName="Ignored Activities" sap:VirtualizedContainerService.HintSize="416,269.6" sap2010:WorkflowViewState.IdRef="Sequence_8">
                           <sap:WorkflowViewStateService.ViewState>
                             <scg:Dictionary x:TypeArguments="x:String, x:Object">
                               <x:Boolean x:Key="IsExpanded">True</x:Boolean>
@@ -264,22 +264,22 @@
                         </Sequence>
                       </ui:CommentOut.Body>
                     </ui:CommentOut>
-                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'submit'" sap:VirtualizedContainerService.HintSize="451.2,197.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" Version="V3">
+                    <uix:NClick ActivateBefore="True" ClickType="Single" DisplayName="Click 'submit'" sap:VirtualizedContainerService.HintSize="451.2,189.6" sap2010:WorkflowViewState.IdRef="NClick_9" KeyModifiers="None" MouseButton="Left" Version="V3">
                       <uix:NClick.Target>
                         <uix:TargetAnchorable BrowserURL="https://www.dclibrary.org/suggest-title" ContentHash="7fz0dnjuCU6t2Zayn0hcfw" DesignTimeRectangle="148, 1102, 86, 50" DesignTimeScaleFactor="1.25" ElementType="Button" FullSelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Submit' /&gt;" FuzzySelectorArgument="&lt;webctrl tag='BUTTON' visibleinnertext='Submit' check:text='Submit' /&gt;" Guid="30d15b55-d0a9-46f4-b9f3-56b6233ce96d" InformativeScreenshot="dd833e9ce167804e0d512e321d6ea052.png" Reference="waikBANbM0CUbwa0Sj05Hg/0ivFUTmgNUC8R0-RcLNRHA" ScopeSelectorArgument="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" SearchSteps="FuzzySelector" Version="V3" Visibility="Interactive" />
                       </uix:NClick.Target>
                     </uix:NClick>
-                    <uix:NNavigateBrowser Action="Refresh" DisplayName="Navigate Browser - Refresh" sap:VirtualizedContainerService.HintSize="451.2,105.6" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
+                    <uix:NNavigateBrowser Action="CloseTab" DisplayName="Navigate Browser - Close Tab" sap:VirtualizedContainerService.HintSize="451.2,107.2" sap2010:WorkflowViewState.IdRef="NNavigateBrowser_1" Version="V3" />
                   </Sequence>
                 </ActivityAction>
-              </ui:ForEach.Body>
-            </ui:ForEach>
+              </uix:NApplicationCard.Body>
+              <uix:NApplicationCard.TargetApp>
+                <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="aC8UTHvUrE6kirHJzx2uzQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADHElEQVRYR7WXv6oTURDG8wSSFxDyABYpFRGC3EaQSxoJilxWEG5jkUYsTaeFmFYsDLeyDDa2W1ulshEkrWCR3mb9foeZZbLZ3ezePwMfSc6ZmW/OnJnZzaBNzn/9XAi5YS1ktnXzIrKlUNRgJ6yEsanejBhRXQARG2EuDM3sekQOp0YACCQTJgLrnH4rxEAA61NzcTUxZ+649t61PhY4PfURAyE4amdkqv3FnLjDTo6kR3aom2hLcP0KVwaczB1sbbmXyG4k0DXuh2uc23a7SDFW/5K1fw/vzoWtUBhWwiQZNIhsh8GP43g2pBTvdCoiyJ24ilyoDUS2MZOO3LabRUplAX77+G4igl0gbMJeILKlHuraeG0qzSIlIk/Gv7OZk5Py1Ov6zIS1rVeR52/fxA6KoDi7DS8pjr6/X2zMKYbc5143aH0kLNg3vRJ/njwuvlx8juS0ZfdhJSdDwU9PUfqpap8H0uGqyNJBID9ev0qF3EtkHFPMldBWMbVcEYFxMoJKvz99vRhLn6L17DnIEuvHsyAlKr80tOUkIuEqIK0rMEfKkGwJhqzEIuZ7cx1oM6Ye1KZPJB4IDyMnJhMHLSkfBBJ9LmzrULRZ7fnk8Nbz80zYCYV9LoTORSU/y+CzeSJqk6qOAaxFNDHiKgjk6GSTD7LqnbKy5XqRAj0eAygezM785E3YCrXTUPbUk5N36wYpkoV0Z/mjkyoZwfi1kBnIfS8X0qyQLTOC6egH6fdElAFpy+48fRHJAf1OnZQn1hr1UQZyb3a2/nty34k5SG12joo5juQUUmxRTli+AZl+CuT2s5fFh9PT9pY7Ju7MwHeyUi3SCIYP10KHeN1g1z8DMpqaA0d5EpF4IAfPACGlXPpDgUDcvr36qyKDeTBurF6RMWSoC3CQbtlSmO6n+wurlEfB8PgzvEZkFw8Bur2SucggTj9O0ukupUf6GWCRHPR/S5bRWNgEJ62BaK+qDyjEq/1fkINYUIBA9oYLv4U4NSHuN4DaRM6qkw9ASDCRmO/XRxxFjpvu14l7PSUvLSJhThAIpweXJB4M/gOCBBsRsCcsrAAAAABJRU5ErkJggg==" InformativeScreenshot="095a695a789396bba9b4693c8a45adb3.jpg" Reference="waikBANbM0CUbwa0Sj05Hg/JSmbV3IhAkiRifARt2JFNA" Selector="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" Title="Suggest a Title | District of Columbia Public Library" Url="https://www.dclibrary.org/suggest-title" />
+              </uix:NApplicationCard.TargetApp>
+            </uix:NApplicationCard>
           </Sequence>
         </ActivityAction>
-      </uix:NApplicationCard.Body>
-      <uix:NApplicationCard.TargetApp>
-        <uix:TargetApp Area="0, 0, 0, 0" BrowserType="Chrome" ContentHash="aC8UTHvUrE6kirHJzx2uzQ" IconBase64="iVBORw0KGgoAAAANSUhEUgAAACAAAAAgCAYAAABzenr0AAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8YQUAAAAZdEVYdFNvZnR3YXJlAEFkb2JlIEltYWdlUmVhZHlxyWU8AAADHElEQVRYR7WXv6oTURDG8wSSFxDyABYpFRGC3EaQSxoJilxWEG5jkUYsTaeFmFYsDLeyDDa2W1ulshEkrWCR3mb9foeZZbLZ3ezePwMfSc6ZmW/OnJnZzaBNzn/9XAi5YS1ktnXzIrKlUNRgJ6yEsanejBhRXQARG2EuDM3sekQOp0YACCQTJgLrnH4rxEAA61NzcTUxZ+649t61PhY4PfURAyE4amdkqv3FnLjDTo6kR3aom2hLcP0KVwaczB1sbbmXyG4k0DXuh2uc23a7SDFW/5K1fw/vzoWtUBhWwiQZNIhsh8GP43g2pBTvdCoiyJ24ilyoDUS2MZOO3LabRUplAX77+G4igl0gbMJeILKlHuraeG0qzSIlIk/Gv7OZk5Py1Ov6zIS1rVeR52/fxA6KoDi7DS8pjr6/X2zMKYbc5143aH0kLNg3vRJ/njwuvlx8juS0ZfdhJSdDwU9PUfqpap8H0uGqyNJBID9ev0qF3EtkHFPMldBWMbVcEYFxMoJKvz99vRhLn6L17DnIEuvHsyAlKr80tOUkIuEqIK0rMEfKkGwJhqzEIuZ7cx1oM6Ye1KZPJB4IDyMnJhMHLSkfBBJ9LmzrULRZ7fnk8Nbz80zYCYV9LoTORSU/y+CzeSJqk6qOAaxFNDHiKgjk6GSTD7LqnbKy5XqRAj0eAygezM785E3YCrXTUPbUk5N36wYpkoV0Z/mjkyoZwfi1kBnIfS8X0qyQLTOC6egH6fdElAFpy+48fRHJAf1OnZQn1hr1UQZyb3a2/nty34k5SG12joo5juQUUmxRTli+AZl+CuT2s5fFh9PT9pY7Ju7MwHeyUi3SCIYP10KHeN1g1z8DMpqaA0d5EpF4IAfPACGlXPpDgUDcvr36qyKDeTBurF6RMWSoC3CQbtlSmO6n+wurlEfB8PgzvEZkFw8Bur2SucggTj9O0ukupUf6GWCRHPR/S5bRWNgEJ62BaK+qDyjEq/1fkINYUIBA9oYLv4U4NSHuN4DaRM6qkw9ASDCRmO/XRxxFjpvu14l7PSUvLSJhThAIpweXJB4M/gOCBBsRsCcsrAAAAABJRU5ErkJggg==" InformativeScreenshot="095a695a789396bba9b4693c8a45adb3.jpg" Reference="waikBANbM0CUbwa0Sj05Hg/JSmbV3IhAkiRifARt2JFNA" Selector="&lt;html app='chrome.exe' title='Suggest a Title | District of Columbia Public Library' /&gt;" Title="Suggest a Title | District of Columbia Public Library" Url="https://www.dclibrary.org/suggest-title" />
-      </uix:NApplicationCard.TargetApp>
-    </uix:NApplicationCard>
+      </ui:ForEach.Body>
+    </ui:ForEach>
   </Sequence>
 </Activity>
